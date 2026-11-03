@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string msg, enc = "", dec = "";
+    int key = 3;
+
+    cout << "Enter a message: ";
+    getline(cin, msg);
+
+    for(int i = 0; i < msg.length(); i++)
+    {
+        enc += char(msg[i] + key);
+    }
+
+    cout << "Encrypted message: " << enc << endl;
+
+    for(int i = 0; i < enc.length(); i++)
+    {
+        dec += char(enc[i] - key);
+    }
+
+    cout << "Decrypted message: " << dec << endl;
+
+    return 0;
+}
