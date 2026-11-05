@@ -1,0 +1,19 @@
+bucket = 0
+size = 10
+
+n = int(input("Enter number of packets: "))
+
+for i in range(n):
+    packet = int(input("Enter packet size: "))
+
+    if bucket + packet <= size:
+        bucket += packet
+        print("Packet accepted")
+    else:
+        print("Packet rejected")
+
+    if bucket > 0:
+        print("Packets sent: 1")
+        bucket -= 1
+
+    print("Remaining bucket size:", bucket)
