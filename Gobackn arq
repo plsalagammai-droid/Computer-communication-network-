@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main()
+{
+    int n, i, window = 4;
+
+    clrscr();
+
+    printf("Enter number of frames: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i += window)
+    {
+        printf("\nSending frames: ");
+
+        for(int j = i; j < i + window && j <= n; j++)
+            printf("%d ", j);
+
+        printf("\nAcknowledgment received");
+    }
+
+    printf("\n\nAll frames sent successfully");
+
+    getch();
+}
+
+
+
